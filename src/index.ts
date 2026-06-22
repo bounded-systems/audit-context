@@ -20,6 +20,7 @@
 // stamps it onto the row so the audit log can distinguish a justified gh
 // comparator from an accidental gh fallback that the triage refactor missed.
 
+/** Why a `gh` call is load-bearing as a source of truth — stamped onto the audit row to tell a justified comparator from an accidental fallback. */
 export type GhTruthReason = "forward-orphan-detection" | "drift-comparator" | "stale-comparator";
 
 let currentVerb: string | null = null;
@@ -32,6 +33,7 @@ let currentGhTruthReason: GhTruthReason | null = null;
 // audit executor), so it lives in its own slot rather than overloading `actor`.
 let currentSource: string | null = null;
 
+/** Snapshot of the ambient audit context attributed to a `gh` call. */
 export type AuditRuntimeContext = {
   verb: string | null;
   actor: string;
@@ -40,6 +42,7 @@ export type AuditRuntimeContext = {
   source: string | null;
 };
 
+/** Set the ambient audit context for subsequent `gh` calls (verb, executing actor, dispatch source). Only provided fields change. */
 export function setAuditRuntimeContext(ctx: {
   verb?: string | null;
   actor?: string;
@@ -50,6 +53,7 @@ export function setAuditRuntimeContext(ctx: {
   if (ctx.source !== undefined) currentSource = ctx.source;
 }
 
+/** Read the current ambient audit context. */
 export function getAuditRuntimeContext(): AuditRuntimeContext {
   return {
     verb: currentVerb,
