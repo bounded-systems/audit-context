@@ -4,7 +4,10 @@
   "description": "Ambient runtime context for gh-call audit attribution (verb, actor, truth reason)",
   "bounded": {
     "tagline": "Ambient runtime context for gh-call audit attribution (verb, actor, truth reason)",
-    "kind": "room"
+    "kind": "room",
+    "facet": "noun",
+    "role": "context",
+    "domain": "audit/attribution"
   },
   "license": "MIT",
   "type": "module",
