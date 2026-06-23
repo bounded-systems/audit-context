@@ -1,0 +1,10 @@
+{
+  "name": {
+    "type": "name",
+    "value": "Audit Context"
+  },
+  "description": {
+    "type": "meta",
+    "value": "Ambient runtime context for gh-call audit attribution (verb, actor, truth reason)"
+  }
+}
