@@ -3,8 +3,16 @@
     "type": "name",
     "value": "Audit Context"
   },
+  "tagline": {
+    "type": "tagline",
+    "value": "Ambient runtime context for audit attribution — the verb, actor, and truth reason a privileged call should be recorde…"
+  },
   "description": {
     "type": "meta",
-    "value": "Ambient runtime context for gh-call audit attribution (verb, actor, truth reason)"
+    "value": "Ambient runtime context for audit attribution — the verb, actor, and truth reason a privileged call should be recorded under.  When a gh (or similar) call is made deep in a call stack, the audit log wants to know why: which verb invoked it, on whose behalf, and on what basis i…"
+  },
+  "keywords": {
+    "type": "body",
+    "value": "AUDIT · CONTEXT · ATTRIBUTION · ASYNC-CONTEXT · PROVENANCE"
   }
 }
